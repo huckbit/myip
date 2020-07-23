@@ -17,8 +17,8 @@ export class IpCard extends Component {
     }
     return (
       <div className="container wrapper">
-        <div className="columns">
-          <div className="column is-6 is-offset-3 has-text-centered">
+        <div className="columns is-centered-mobile">
+          <div className="column is-10-mobile is-offset-1-mobile is-6 is-offset-3 has-text-centered">
             <div className="mt-5">
               <h2 className="is-size-1 has-text-weight-bold">Your IP</h2>
               <div className="notification mt-2">
