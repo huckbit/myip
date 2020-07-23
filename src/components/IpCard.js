@@ -4,39 +4,11 @@ import Location from "./../asset/mapMarker.svg";
 import IspImage from "./../asset/access-point-network.svg";
 
 export class IpCard extends Component {
-  constructor() {
-    super();
-    this.state = { loaded: null, data: [] };
-  }
-
-  componentDidMount() {
-    this.getClientInfo();
-  }
-
-  handleClick = () => {
-    this.setState({ loaded: null });
-    this.getClientInfo();
-  };
-
-  getClientInfo() {
-    fetch(`https://api.ipify.org?format=json`)
-      .then((res) => res.json())
-      .then((res) => {
-        const ip = res.ip;
-        fetch(`https://json.geoiplookup.io/${ip}`)
-          .then((res) => res.json())
-          .then((json) => {
-            // console.log(json);
-            this.setState({ loaded: true });
-            this.setState({ data: json });
-          });
-      });
-  }
   render() {
-    const { ip, region, country_name, country_code, isp } = this.state.data;
-    if (this.state.loaded == null) {
+    const { ip, region, country_name, country_code, isp } = this.props.data;
+    if (this.props.loaded == null) {
       return (
-        <div className="columns" style={this.style}>
+        <div className="columns wrapper">
           <div className="column is-6 is-offset-3 has-text-centered">
             <h1 className="is-size-3">Gathering information ...</h1>
           </div>
@@ -60,7 +32,10 @@ export class IpCard extends Component {
                   <img className="inline-img" src={IspImage} alt="ispImage" /> {isp}
                 </p>
               </div>
-              <button className="button is-large is-dark mt-3" onClick={this.handleClick}>
+              <button
+                className="button is-large is-dark mt-3"
+                onClick={() => this.props.handleClick()}
+              >
                 Refresh
               </button>
             </div>
