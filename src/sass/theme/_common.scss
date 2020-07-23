@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inline-img {
+  vertical-align: bottom;
+  margin-bottom: -5px;
+  width: 40px;
+}
