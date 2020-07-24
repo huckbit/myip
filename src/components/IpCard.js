@@ -22,7 +22,7 @@ export class IpCard extends Component {
         <div className="columns is-centered-mobile">
           <div className="column is-10-mobile is-offset-1-mobile is-6 is-offset-3 has-text-centered">
             <h2 className="is-size-1 has-text-weight-bold">Your IP</h2>
-            <div className="notification mt-2">
+            <div className="notification p-5 mt-2">
               <img src={ipLogo} alt="ip" width="60" />
               <h1 className="is-size-1 is-size-2-mobile has-text-weight-bold">{ip}</h1>
               <p className="mt-5">
