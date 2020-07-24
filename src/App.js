@@ -6,7 +6,7 @@ import "./App.scss";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { loaded: null, data: [] };
+    this.state = { data: [] };
   }
 
   componentDidMount() {
@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({ loaded: null });
+    this.setState({ data: [] });
     this.getClientInfo();
   };
 
@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <IpCard data={this.state.data} loaded={this.state.loaded} handleClick={this.handleClick} />
+        <IpCard data={this.state.data} handleClick={this.handleClick} />
         <Gdpr />
       </div>
     );

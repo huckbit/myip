@@ -6,7 +6,7 @@ import IspImage from "./../asset/access-point-network.svg";
 export class IpCard extends Component {
   render() {
     const { ip, region, country_name, country_code, isp } = this.props.data;
-    if (this.props.loaded == null) {
+    if (!ip) {
       return (
         <div className="section wrapper">
           <div className="columns">
