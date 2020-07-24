@@ -1,5 +1,6 @@
 import React from "react";
 import IpCard from "./components/IpCard";
+import Gdpr from "./components/Gdpr";
 import "./App.scss";
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
     return (
       <div>
         <IpCard data={this.state.data} loaded={this.state.loaded} handleClick={this.handleClick} />
+        <Gdpr />
       </div>
     );
   }
