@@ -20,7 +20,12 @@ function Gdpr() {
         expires={150}
       >
         This website uses cookies to enhance the user experience.{" "}
-        <a className="has-text-white" href="https://www.cookiesandyou.com/" target="_blank">
+        <a
+          className="has-text-white"
+          href="https://www.cookiesandyou.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn more
         </a>
       </CookieConsent>
