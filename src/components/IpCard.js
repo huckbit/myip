@@ -33,10 +33,7 @@ export class IpCard extends Component {
                 <img className="inline-img" src={IspImage} alt="ispImage" /> {isp}
               </p>
             </div>
-            <button
-              className="button is-large is-dark mt-3"
-              onClick={() => this.props.handleClick()}
-            >
+            <button className="button is-large is-dark mt-3" onClick={this.props.handleClick}>
               Refresh
             </button>
           </div>
