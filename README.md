@@ -1,1 +1,2 @@
 # myip
+myip.huckbit.com
